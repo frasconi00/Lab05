@@ -40,8 +40,14 @@ public class FXMLController {
     	
     	//Controllare che contenga solo lettere!
     	
+    	//controllare che non sia vuoto il campo di imput
     	if(input==null || input.equals("")) {
     		txtCorretti.setText("Errore: inserisci una stringa");
+    		return;
+    	}
+    	
+    	if(!input.matches("[a-zA-Z]+")) {
+    		txtCorretti.setText("Errore: inserisci solo caratteri alfabetici");
     		return;
     	}
     	
